@@ -34,7 +34,7 @@ function start() {
     let timerFunction = () => {
         //change the display
         document.getElementById('minutes').innerHTML = workMinutes;
-        document.getElementById('seconds').innerHTML = seconds;
+        document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, "0");
 
         // start
         seconds = seconds - 1;

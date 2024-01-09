@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
-
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- ICONS -->
-    <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-
- <!-- ... audio ... -->
- <audio id="audio" src="audio.mp3"></audio>
-</head>
-<body>
-    <section>
-        <div class="container">
-            <h1>Pomodoro</h1>
-
-            <div class="painel">
-                <p id="work">work</p>
-                <p id="break">break</p>
-            </div>
-
-            <div class="timer">
-                <div class="circle">
-                    <div class="time">
-                        <p id="minutes"></p>
-                        <p>:</p>
-                        <p id="seconds"></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="controls">
-                <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
-
-                <a id="reset" href="./"><i class="fa-solid fa-arrow-rotate-left"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCRIPT -->
-    <script src="./script.js"></script>
-</body>
+    <head>
+        <style>
+            /* Your existing CSS styles */
+            body {
+                align-items: center;   
+                text-align: center;
+                padding-top: 80px;
+                font-size: larger;
+                background-color: green;
+            }
+            #inputText, #inputNumber {
+                border-radius: 10px;
+                height: 40px;
+                text-align: center;
+            }
+            ol#inputRecords {
+                padding-left: 20px;
+                text-align: center;
+                list-style-position: inside;
+            }
+            button {
+                height: 40px;
+                border-radius: 10px;
+                cursor: grabbing;
+            }
+            img {
+                height: 100px;
+                display: block;
+                padding-left: 750px;
+                padding-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="/20200807_SokaGakkai_Logo_A-1.png" alt="">
+        <input type="text" id="inputText" placeholder="Enter Name Here">
+        <input type="number" id="inputNumber" placeholder="Enter Time Here">
+        <button onclick="addRecord()">Submit</button>
+        <p>Collective Daimoku Hours: <span id="totalNumber">0</span></p>
+        <p>Daimoku Contributors:</p>
+        <ol id="inputRecords"></ol>
+        
+    </body>
+    <script src="script.js">
+        
+    </script>
 </html>
